@@ -1,0 +1,37 @@
+/* --- ستايل الصفحة الرئيسية الأنيق --- */
+body {
+    font-family: 'Tajawal', sans-serif; margin: 0; background-color: #112A2A; color: #f0f0f0; direction: rtl;
+}
+h1, h2, h3, .btn { font-family: 'Cairo', sans-serif; font-weight: 700; }
+.container { max-width: 1100px; margin: auto; padding: 0 20px; }
+header { background: #1d1d1d; color: #fff; padding: 1rem 0; border-bottom: 3px solid #d4af37; position: sticky; top: 0; z-index: 100; }
+header nav { display: flex; justify-content: space-between; align-items: center; }
+.logo-link img.logo { max-height: 50px; }
+header ul { list-style: none; padding: 0; margin: 0; }
+header ul li { display: inline; margin-left: 25px; }
+header a { color: #fff; text-decoration: none; transition: color 0.3s; font-size: 1.1rem; font-weight: 700; padding: 5px 10px; }
+header a:hover { color: #d4af37; }
+main { flex-grow: 1; }
+.hero { min-height: 80vh; /* تعديل الارتفاع */ color: #fff; display: flex; justify-content: center; align-items: center; text-align: center; padding: 2rem 0; }
+.hero-content { animation: fadeInDown 1.5s ease-out; }
+.hero-main-logo { max-width: 180px; margin-bottom: 1rem; }
+.hero-title { font-size: 4rem; font-weight: 900; margin-bottom: 0.5rem; letter-spacing: 2px; color: #ffffff; }
+.hero-subtitle { font-size: 1.5rem; margin-bottom: 2rem; color: #ccc; }
+.btn { display: inline-block; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; transition: background-color 0.3s, transform 0.3s ease; font-size: 16px; }
+.btn:hover { transform: translateY(-3px); }
+.btn-primary { background: #d4af37; color: #111; font-weight: bold; }
+.btn-primary:hover { background: #c8a02b; }
+.btn-hero { padding: 15px 35px; font-size: 1.2rem; }
+footer { text-align: center; padding: 2rem 0; background: #111; color: #888; }
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+.animated-scissors { position: absolute; top: 20%; right: 10%; z-index: -1; animation: snipSnip 2s infinite ease-in-out; }
+.animated-scissors img { width: 100px; opacity: 0.5; }
+@keyframes snipSnip { 0% { transform: rotate(20deg); } 50% { transform: rotate(-15deg); } 100% { transform: rotate(20deg); } }
+
+/* تعديلات الشاشات الصغيرة */
+@media (max-width: 768px) {
+    header nav { flex-direction: column; gap: 15px; }
+    .hero-title { font-size: 2.5rem; } /* تصغير الخط */
+    .hero-subtitle { font-size: 1.2rem; }
+    .animated-scissors { display: none; }
+}
